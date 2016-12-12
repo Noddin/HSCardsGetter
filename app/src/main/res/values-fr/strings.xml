@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="seek_name">Recherche nom</string>
+    <string name="all_cards">Toutes les cartes</string>
+    <string name="sort_classes">Toutes les classes</string>
+    <string name="welcome_toast">BIENVENUE</string>
+
+</resources>

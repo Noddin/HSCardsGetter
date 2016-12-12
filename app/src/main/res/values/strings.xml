@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">HSCardsGetter</string>
+    <string name="seek_name">Name search</string>
+    <string name="all_cards">All cards</string>
+    <string name="sort_classes">All classes</string>
+    <string name="welcome_toast">WELCOME</string>
+
+</resources>
