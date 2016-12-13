@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="HSYellow">#AE8634</color>
+    <color name="HSLightBlue">#7D9ED0</color>
+    <color name="HSDarkBlue">#495D88</color>
 </resources>

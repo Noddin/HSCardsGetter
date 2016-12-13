@@ -15,14 +15,19 @@
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed" />
+        app:tabMode="fixed"
+        android:layout_weight="0"
+        app:tabBackground="@color/HSDarkBlue"
+        app:tabTextColor="#FFFF"
+        app:tabSelectedTextColor="@color/HSYellow"
+        app:tabIndicatorColor="@color/HSYellow"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0px"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/white" />
+        android:layout_below="@id/sliding_tabs"/>
 
 
 </RelativeLayout>

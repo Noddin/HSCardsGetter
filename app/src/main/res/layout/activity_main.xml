@@ -5,23 +5,24 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.noddin.hscardsgetter.MainActivity">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed" />
+        app:tabMode="fixed"
+        android:layout_weight="0"
+        app:tabBackground="@color/HSDarkBlue"
+        app:tabTextColor="#FFFF"
+        app:tabSelectedTextColor="@color/HSYellow"
+        app:tabIndicatorColor="@color/HSYellow"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0px"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@android:color/white" />
+        android:layout_below="@id/sliding_tabs"/>
 
 </RelativeLayout>
