@@ -1,9 +1,8 @@
 package com.example.noddin.hscardsgetter;
 
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
+import android.content.Context;
 import android.util.Log;
 
 import java.io.File;
@@ -15,17 +14,17 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GetBiersServices extends IntentService {
+public class GetCardsServices extends IntentService {
 
-    private static final String ACTION_GET_ALL_BIERS = "com.example.noddin.myapplication.action.FOO";
+    private static final String ACTION_GET_ALL_CARDS = "com.example.noddin.hscardsgetter.action.GET_ALL_CARDS";
 
-    public GetBiersServices() {
-        super("GetBiersServices");
+    public GetCardsServices() {
+        super("GetCardsServices");
     }
 
-    public static void startActionBiers(Context context) {
-        Intent intent = new Intent(context, GetBiersServices.class);
-        intent.setAction(ACTION_GET_ALL_BIERS);
+    public static void startActionCards(Context context) {
+        Intent intent = new Intent(context, GetCardsServices.class);
+        intent.setAction(ACTION_GET_ALL_CARDS);
         context.startService(intent);
     }
 
@@ -33,30 +32,27 @@ public class GetBiersServices extends IntentService {
     protected void onHandleIntent(Intent intent) {
         if (intent != null) {
             final String action = intent.getAction();
-            if (ACTION_GET_ALL_BIERS.equals(action)) {
-                handleActionBiers();
-                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(AllCards_Activity.BIERS_UPDATE));
+            if (ACTION_GET_ALL_CARDS.equals(action)) {
+                handleActionCards();
             }
         }
     }
 
-    private void handleActionBiers() {
-
+    private void handleActionCards () {
         URL url = null;
         try {
-            url = new URL("http://binouze.fabrigli.fr/bieres.json");
+            url = new URL("");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
             if (HttpURLConnection.HTTP_OK == conn.getResponseCode()) {
-                copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), "bieres.json"));
+                copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), ""));
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         Log.i("tag", "Message");
     }

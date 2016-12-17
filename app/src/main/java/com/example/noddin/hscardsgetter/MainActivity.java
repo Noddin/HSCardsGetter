@@ -27,6 +27,8 @@ public class MainActivity extends MainContainer_Abstract{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //link activity to it's layout;
 
+        Toast.makeText(getApplicationContext(), getString(R.string.welcome_toast), Toast.LENGTH_LONG).show();
+
         // Get the ViewPager and set it's PagerAdapter so that it can display items
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new SampleFragmentPagerAdapter(getSupportFragmentManager(), this));
