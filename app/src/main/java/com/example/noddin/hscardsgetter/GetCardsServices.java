@@ -3,6 +3,7 @@ package com.example.noddin.hscardsgetter;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.Context;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import java.io.File;
@@ -34,6 +35,7 @@ public class GetCardsServices extends IntentService {
             final String action = intent.getAction();
             if (ACTION_GET_ALL_CARDS.equals(action)) {
                 handleActionCards();
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(AllCards_Activity.CARDS_UPDATE));
             }
         }
     }
@@ -41,12 +43,13 @@ public class GetCardsServices extends IntentService {
     private void handleActionCards () {
         URL url = null;
         try {
-            url = new URL("");
+            url = new URL("https://omgvamp-hearthstone-v1.p.mashape.com/cards");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestProperty ("X-Mashape-Key", "AYI7bfnzl7mshjUxuIIuAGgDjxNQp1cVJkVjsnM16XQb6t9Xuo");
             conn.setRequestMethod("GET");
             conn.connect();
             if (HttpURLConnection.HTTP_OK == conn.getResponseCode()) {
-                copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), ""));
+                 copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), ""));
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
