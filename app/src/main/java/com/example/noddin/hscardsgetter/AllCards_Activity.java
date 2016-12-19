@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -46,7 +47,7 @@ public class AllCards_Activity extends AppCompatActivity implements onListener{
 
     public JSONArray getCardsFromFile(){
         try{
-            InputStream is = new FileInputStream(getCacheDir() + "/" + "cards");
+            InputStream is = new FileInputStream(getCacheDir() + "/" + "allCard.json");
             byte[] buffer = new byte[is.available()];
             is.read(buffer);
             is.close();

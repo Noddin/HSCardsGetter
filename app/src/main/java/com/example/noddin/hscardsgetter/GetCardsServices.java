@@ -43,13 +43,13 @@ public class GetCardsServices extends IntentService {
     private void handleActionCards () {
         URL url = null;
         try {
-            url = new URL("https://omgvamp-hearthstone-v1.p.mashape.com/cards");
+            url = new URL("https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/Hunter");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestProperty ("X-Mashape-Key", "AYI7bfnzl7mshjUxuIIuAGgDjxNQp1cVJkVjsnM16XQb6t9Xuo");
             conn.setRequestMethod("GET");
             conn.connect();
             if (HttpURLConnection.HTTP_OK == conn.getResponseCode()) {
-                 copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), ""));
+                 copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), "allCard.json"));
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
