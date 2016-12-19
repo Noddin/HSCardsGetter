@@ -11,7 +11,9 @@
     <string name="toast2">You created a toast through an AlertDialog!</string>
     <string name="expected_stuff">Awaited content</string>
     <string name="HelloWorld">Hello World !</string>
-    <string name="Button">Testing Button</string>
+    <string name="Button">Open Youtube</string>
     <string name="description">You will find here everything requested to validate the project.</string>
+    <string name="yes">Yes!</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

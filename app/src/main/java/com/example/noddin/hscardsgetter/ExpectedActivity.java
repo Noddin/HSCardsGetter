@@ -29,12 +29,12 @@ public class ExpectedActivity extends AppCompatActivity {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.sentence)
-                .setPositiveButton("YES !", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(getApplicationContext(), R.string.toast2, Toast.LENGTH_LONG).show();
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
@@ -50,6 +50,15 @@ public class ExpectedActivity extends AppCompatActivity {
 
 
 }
+
+    public void startAct (View view){
+        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.google.android.youtube");
+        if (launchIntent != null) {
+            startActivity(launchIntent);//null pointer check in case package name was not found
+        }
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,7 +88,7 @@ public class ExpectedActivity extends AppCompatActivity {
     }
 
 
-    
+
 
 
 }
