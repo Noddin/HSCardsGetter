@@ -49,7 +49,7 @@ public class GetCardsServices extends IntentService {
             conn.setRequestMethod("GET");
             conn.connect();
             if (HttpURLConnection.HTTP_OK == conn.getResponseCode()) {
-                 copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), "allCard.json"));
+                copyInputStreamToFile(conn.getInputStream(), new File(getCacheDir(), "allCard.json"));
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();

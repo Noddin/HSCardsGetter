@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -28,7 +29,7 @@ public class PageFragment extends Fragment implements onListener{
     public CardsAdapter cardsAdapter;
 
     public static final String ARG_PAGE = "ARG_PAGE";
-    private int mPage;
+    private int mPage = 1;
 
     public static PageFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -45,21 +46,19 @@ public class PageFragment extends Fragment implements onListener{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
         RecyclerView rv = (RecyclerView) view;
 
         IntentFilter intentFilter = new IntentFilter(CARDS_UPDATE);
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(new CardsUpdate(this), intentFilter);
 
-        GetCardsServices.startActionCards(getActivity());
+            GetCardsServices.startActionCards(getActivity());
 
-        rv.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
+            rv.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
 
-        cardsAdapter = new CardsAdapter(getCardsFromFile());
-
-        rv.setAdapter(cardsAdapter);
+            cardsAdapter = new CardsAdapter(getCardsFromFile());
+            rv.setAdapter(cardsAdapter);
 
         return view;
     }
@@ -81,6 +80,9 @@ public class PageFragment extends Fragment implements onListener{
     }
 
     public void onFinish() {
-        cardsAdapter.setNewCard(getCardsFromFile());
+            cardsAdapter = new CardsAdapter(getCardsFromFile());
     }
+
+
+
 }

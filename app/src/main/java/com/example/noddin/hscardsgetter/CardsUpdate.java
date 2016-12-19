@@ -18,7 +18,6 @@ public class CardsUpdate extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Toast.makeText(context, R.string.welcome_toast, Toast.LENGTH_LONG).show();
         listener.onFinish();
     }
 }
