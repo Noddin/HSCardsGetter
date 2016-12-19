@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.noddin.hscardsgetter">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Heathstone Cards"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,11 @@
         </activity>
         <activity android:name=".AllCards_Activity" />
         <activity android:name=".SeekCards_Activity" />
-        <activity android:name=".SortCards_Activity"></activity>
+        <activity android:name=".SortCards_Activity" />
+
+        <service
+            android:name=".GetCardsServices"
+            android:exported="false"></service>
     </application>
 
 </manifest>
