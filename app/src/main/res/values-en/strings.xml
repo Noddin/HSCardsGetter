@@ -7,10 +7,11 @@
     <string name="sort_classes">All classes</string>
     <string name="welcome_toast">WELCOME</string>
     <string name="sentence">Pop up a toast ?</string>
-    <string name="toast2">You created a toast !</string>
     <string name="toast">You created a toast !</string>
+    <string name="toast2">You created a toast through an AlertDialog!</string>
     <string name="expected_stuff">Awaited content</string>
     <string name="HelloWorld">Hello World !</string>
     <string name="Button">Testing Button</string>
+    <string name="description">You will find here everything requested to validate the project.</string>
 
 </resources>
