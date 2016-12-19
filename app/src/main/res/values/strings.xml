@@ -16,5 +16,6 @@
     <string name="description">You will find here everything requested to validate the project.</string>
     <string name="yes">Yes!</string>
     <string name="cancel">Cancel</string>
+    <string name="download_complete">Download Complete !</string>
 
 </resources>
