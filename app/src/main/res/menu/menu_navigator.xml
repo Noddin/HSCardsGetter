@@ -11,17 +11,10 @@
         />
 
     <item
-        android:id="@+id/seek_cards"
-        android:orderInCategory="101"
-        android:title="@string/seek_name"
-        app:showAsAction="never"
-        />
-
-    <item
-        android:id="@+id/sort_classes"
-        android:orderInCategory="102"
-        android:title="@string/sort_classes"
-        app:showAsAction="ifRoom"
+        android:id="@+id/activity_expected"
+        android:orderInCategory="103"
+        android:title="@string/expected_stuff"
+        app:showAsAction="always"
         />
 
 </menu>

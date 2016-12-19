@@ -7,5 +7,15 @@
     <string name="welcome_toast">WELCOME</string>
 
     <string name="action_settings">Settings</string>
+    <string name="sentence">Pop a toast up ?</string>
+    <string name="toast">You created a toast !</string>
+    <string name="toast2">You created a toast through an AlertDialog!</string>
+    <string name="expected_stuff">Awaited content</string>
+    <string name="HelloWorld">Hello World !</string>
+    <string name="Button">Open Youtube</string>
+    <string name="description">You will find here everything requested to validate the project.</string>
+    <string name="yes">Yes!</string>
+    <string name="cancel">Cancel</string>
+    <string name="download_complete">Download Complete !</string>
 
 </resources>

@@ -6,5 +6,15 @@
     <string name="all_cards">All cards</string>
     <string name="sort_classes">All classes</string>
     <string name="welcome_toast">WELCOME</string>
+    <string name="sentence">Pop up a toast ?</string>
+    <string name="toast">You created a toast !</string>
+    <string name="toast2">You created a toast through an AlertDialog!</string>
+    <string name="expected_stuff">Awaited content</string>
+    <string name="HelloWorld">Hello World !</string>
+    <string name="Button">Open Youtube</string>
+    <string name="description">You will find here everything requested to validate the project.</string>
+    <string name="yes">Yes!</string>
+    <string name="cancel">Cancel</string>
+    <string name="download_complete">Download Complete !</string>
 
 </resources>
