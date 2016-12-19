@@ -25,7 +25,7 @@ public abstract class MainContainer_Abstract extends AppCompatActivity {
             case R.id.all_cards:
                 startActivity(new Intent(this,AllCards_Activity.class));
                 break;
-
+/*
             case R.id.seek_cards:
                 startActivity(new Intent(this, SeekCards_Activity.class));
                 break;
@@ -33,7 +33,7 @@ public abstract class MainContainer_Abstract extends AppCompatActivity {
             case R.id.sort_classes:
                 startActivity(new Intent(this, SeekCards_Activity.class));
                 break;
-
+*/
             case R.id.activity_expected:
                 startActivity(new Intent(this, ExpectedActivity.class));
                 break;

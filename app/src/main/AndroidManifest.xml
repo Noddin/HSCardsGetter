@@ -20,8 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".AllCards_Activity" />
-        <activity android:name=".SeekCards_Activity" />
-        <activity android:name=".SortCards_Activity" />
         <activity android:name=".ExpectedActivity" />
 
         <service
