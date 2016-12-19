@@ -21,7 +21,14 @@
         android:id="@+id/sort_classes"
         android:orderInCategory="102"
         android:title="@string/sort_classes"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/activity_expected"
+        android:orderInCategory="103"
+        android:title="@string/expected_stuff"
+        app:showAsAction="always"
         />
 
 </menu>

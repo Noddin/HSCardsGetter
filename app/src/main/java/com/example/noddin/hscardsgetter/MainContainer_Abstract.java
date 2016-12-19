@@ -33,6 +33,10 @@ public abstract class MainContainer_Abstract extends AppCompatActivity {
             case R.id.sort_classes:
                 startActivity(new Intent(this, SeekCards_Activity.class));
                 break;
+
+            case R.id.activity_expected:
+                startActivity(new Intent(this, ExpectedActivity.class));
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
