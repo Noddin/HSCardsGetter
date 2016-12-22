@@ -72,7 +72,7 @@ public class ExpectedActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.toast:
-                Toast.makeText(getApplicationContext(), getString(R.string.toast2), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.toast), Toast.LENGTH_LONG).show();
                 break;
 
             case R.id.dialog:
