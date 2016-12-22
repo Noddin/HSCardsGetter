@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_name">HSCardsGetter</string>
     <string name="seek_name">Recherche nom</string>
     <string name="all_cards">Toutes les cartes</string>
     <string name="sort_classes">Toutes les classes</string>
     <string name="welcome_toast">BIENVENUE</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="sentence">Afficher un toast ?</string>
+    <string name="toast">Vous avez créé un toast !</string>
+    <string name="toast2">Vous avez créé un toast via une AlertDialog!</string>
+    <string name="expected_stuff">Contenu attendu</string>
+    <string name="HelloWorld">Bonjour Monde !</string>
+    <string name="Button">Ouvrir Youtube</string>
+    <string name="description">Vous trouverez ici tous les prérequis demandés pour valider le projet.</string>
+    <string name="yes">Oui!</string>
+    <string name="cancel">Annuler</string>
+    <string name="download_complete">Téléchargement terminé !</string>
 
 </resources>
